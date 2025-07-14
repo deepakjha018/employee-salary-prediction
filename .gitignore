@@ -17,16 +17,6 @@ venv/
 .streamlit/config.toml
 .streamlit/credentials.toml
 
-# ── Data ───────────────────────────────────────────────
-data/raw/
-data/processed/*.csv
-!data/processed/employee_salary_final.csv   # keep final cleaned dataset
-datasets/
-*.zip
-*.tar.gz
-
-# ── Models ─────────────────────────────────────────────
-models/*.pkl
 
 # ── Reports / Figures ──────────────────────────────────
 reports/
