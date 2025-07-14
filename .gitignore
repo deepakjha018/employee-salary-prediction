@@ -1,0 +1,40 @@
+# ── Python ─────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*.egg-info/
+dist/
+build/
+.pytest_cache/
+
+# ── Virtual‑envs ───────────────────────────────────────
+.venv/
+env/
+venv/
+
+# ── Jupyter + Streamlit ────────────────────────────────
+.ipynb_checkpoints/
+# Streamlit auto‑saved session files
+.streamlit/config.toml
+.streamlit/credentials.toml
+
+# ── Data ───────────────────────────────────────────────
+data/raw/
+data/processed/*.csv
+!data/processed/employee_salary_final.csv   # keep final cleaned dataset
+datasets/
+*.zip
+*.tar.gz
+
+# ── Models ─────────────────────────────────────────────
+models/*.pkl
+
+# ── Reports / Figures ──────────────────────────────────
+reports/
+*.png
+*.pdf
+
+# ── OS / Editor miscellany ─────────────────────────────
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/

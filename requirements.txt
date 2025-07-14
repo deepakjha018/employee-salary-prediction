@@ -1,0 +1,17 @@
+# Core data / ML
+pandas>=2.2
+numpy>=1.26
+scikit-learn>=1.5
+
+# Serialization & utils
+joblib>=1.4
+
+# Optional but handy for EDA
+matplotlib>=3.9
+seaborn>=0.13
+
+# Jupyter notebook support
+jupyterlab>=4.2
+
+# Optional: Streamlit app
+streamlit>=1.35
