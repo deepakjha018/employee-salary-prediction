@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="https://img.shields.io/badge/Machine%20Learning-Salary%20Prediction-forestgreen?style=for-the-badge&logo=python" alt="ML Badge"/>
+</p>
+
 # Employee Salary Prediction 🧑‍💼💰
 
 Predict whether an individual’s annual income exceeds **$50 K** using demographic and job‑related attributes.  
