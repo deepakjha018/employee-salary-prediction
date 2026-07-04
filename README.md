@@ -23,10 +23,10 @@ This project was developed as part of the **IBM SkillsBuild & Edunet Foundation 
 ## 🚀 Live Demo
 
 🔗 **Application Link:**  
-Coming Soon...
+https://employee-salary-prediction-vk18.streamlit.app/
 
 🔗 **GitHub Repository:**  
-Coming Soon...
+https://github.com/deepakjha018/employee-salary-prediction
 
 
 ---
