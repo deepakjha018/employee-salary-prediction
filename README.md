@@ -1,86 +1,357 @@
 <p align="center">
-  <img src="https://img.shields.io/badge/Machine%20Learning-Salary%20Prediction-forestgreen?style=for-the-badge&logo=python" alt="ML Badge"/>
+  <img src="https://img.shields.io/badge/Machine%20Learning-Employee%20Salary%20Prediction-blue?style=for-the-badge&logo=python"/>
+  <img src="https://img.shields.io/badge/Streamlit-Deployed-red?style=for-the-badge&logo=streamlit"/>
+  <img src="https://img.shields.io/badge/IBM%20SkillsBuild-Internship-blueviolet?style=for-the-badge"/>
 </p>
 
-# Employee Salary Prediction 🧑‍💼💰
 
-Predict whether an individual’s annual income exceeds **$50 K** using demographic and job‑related attributes.  
-Built with **Python · scikit‑learn · Streamlit**.
+# 💼 Employee Salary Prediction using Machine Learning
 
-<div align="center">
-  <img src="docs/roc_curve.png" width="450" alt="ROC curve">
-</div>
+A Machine Learning based web application that predicts whether an employee earns **more than $50K per year** based on demographic and professional information.
+
+This project was developed as part of the **IBM SkillsBuild & Edunet Foundation Internship Program** to demonstrate the complete Machine Learning lifecycle including:
+
+- Data preprocessing
+- Exploratory Data Analysis
+- Model Training
+- Evaluation
+- Deployment using Streamlit
+
 
 ---
 
-## 📂 Project Structure
+## 🚀 Live Demo
 
-employee-salary-prediction/
+🔗 **Application Link:**  
+Coming Soon...
+
+🔗 **GitHub Repository:**  
+Coming Soon...
+
+
+---
+
+# 📌 Project Overview
+
+Employee salary prediction helps analyze how different factors such as education, occupation, working hours, and experience-related attributes influence income categories.
+
+The system predicts:
+
+- `<=50K`
+- `>50K`
+
+annual income category using a trained Machine Learning model.
+
+
+---
+
+# ✨ Features
+
+✔️ Interactive Streamlit Web Interface  
+✔️ Single Employee Salary Prediction  
+✔️ Batch Prediction using CSV Upload  
+✔️ Probability Score Output  
+✔️ Machine Learning Pipeline  
+✔️ Data Cleaning & Preprocessing  
+✔️ Model Evaluation Reports  
+✔️ Visualization of Model Performance  
+
+
+---
+
+# 🧠 Machine Learning Workflow
+
+
+```text
+Dataset Collection
+        ↓
+Data Cleaning
+        ↓
+EDA & Feature Selection
+        ↓
+Feature Encoding + Scaling
+        ↓
+Model Training
+        ↓
+Model Evaluation
+        ↓
+Streamlit Deployment
+```
+
+---
+
+# 🗂️ Project Structure
+
+
+```text
+Employee-Salary-Prediction
+
+├── app/
+│   └── app.py
+
 ├── data/
-│   ├── raw/                         # Original CSV dataset(s)
-│   └── processed/                   # Cleaned & filtered CSVs
+│   ├── raw/
+│   └── processed/
+
+models/
 │
+├── model_boost_notebook.pkl
+├── model_boost.pkl
+└── scaler.pkl
+
 ├── notebooks/
-│   └── eda_preprocessing.ipynb      # Exploratory data analysis + preprocessing
-│   └── model_training.ipynb         # Model training, evaluation, tuning
-│
-├── src/                             # All project source code
-│   ├── __init__.py
-│   ├── config.py                    # Configuration variables (e.g., paths, params)
-│   ├── preprocess.py                # Functions for cleaning, encoding, scaling
-│   ├── train.py                     # Script to train and save model
-│   ├── evaluate.py                  # Model evaluation & metrics
-│   ├── predict.py                   # Single-record prediction logic
-│   └── utils.py                     # Utility/helper functions
-│
-├── models/
-│   ├── model.pkl                    # Saved trained model
-│   └── scaler.pkl                   # Saved scaler/encoder (optional)
-│
-├── app/                             # Optional Streamlit or Flask app
-│   ├── app.py                       # Frontend interface for predictions
-│   └── templates/                   # HTML (for Flask) or config (for Streamlit)
-│
+│   ├── eda_preprocessing.ipynb
+│   └── model_training.ipynb
+
+├── reports/
+│   ├── confusion_matrix.png
+│   ├── roc_curve.png
+│   ├── pr_curve.png
+│   └── classification_report.txt
+
+├── screenshots/
+
+├── src/
+│   ├── preprocess.py
+│   ├── train.py
+│   ├── train_boost.py
+│   ├── evaluate.py
+│   ├── predict.py
+│   └── utils.py
+
 ├── tests/
-│   └── test_model.py                # Unit tests for model logic
-│
-├── requirements.txt                 # List of Python dependencies
-├── README.md                        # Project overview & instructions
-└── .gitignore                       # Files to ignore in version control
+│   └── test_model.py
+
+├── requirements.txt
+├── README.md
+└── .gitignore
+```
+
+---
+
+# 📊 Dataset Information
+
+Dataset used:
+
+**Adult Census Income Dataset**
+
+The dataset contains demographic and employment-related attributes.
+
+Important features:
+
+| Feature | Description |
+|---|---|
+| Age | Employee age |
+| Workclass | Employment category |
+| Education Number | Years of education |
+| Occupation | Job type |
+| Hours Per Week | Weekly working hours |
+| Capital Gain | Investment gain |
+| Capital Loss | Investment loss |
+
+
+Target:
+
+```text
+Income <=50K
+Income >50K
+```
+
+---
+
+# 🤖 Models Used
+
+Two Machine Learning models were compared:
+
+| Model | ROC-AUC | F1 Score |
+|-|-|-|
+| Logistic Regression | 0.84 | 0.60 |
+| Histogram Gradient Boosting | 0.89 | 0.66 |
+
+
+Final selected model:
+
+## ⭐ Histogram Gradient Boosting Classifier
+
+Selected because of:
+
+- Better ROC-AUC score
+- Better handling of non-linear relationships
+- Improved prediction performance
 
 
 ---
 
-## 🚀 Quick Start
+# 📈 Model Performance
+
+
+## ROC Curve
+
+<p align="center">
+<img src="reports/roc_curve.png" width="500">
+</p>
+
+
+## Confusion Matrix
+
+<p align="center">
+<img src="reports/confusion_matrix.png" width="500">
+</p>
+
+
+## Precision Recall Curve
+
+<p align="center">
+<img src="reports/pr_curve.png" width="500">
+</p>
+
+
+---
+
+# 🖥️ Application Screenshots
+
+
+## 🏠 Home Page
+
+<p align="center">
+<img src="screenshots/homepage.png" width="800" alt="Home Page">
+</p>
+
+
+---
+
+## 🔮 Single Prediction
+
+<p align="center">
+<img src="screenshots/prediction.png" width="800" alt="Prediction Page">
+</p>
+
+
+---
+
+## 📂 Batch Prediction
+
+<p align="center">
+<img src="screenshots/batch_prediction.png" width="800" alt="Batch Prediction">
+</p>
+
+
+---
+
+# ⚙️ Installation & Setup
+
+
+### 1. Clone Repository
 
 ```bash
-# 1. Clone + create venv
-git clone https://github.com/<your‑github>/employee-salary-prediction.git
-cd employee-salary-prediction
-python -m venv .venv && source .venv/bin/activate  # Windows: .venv\Scripts\activate
+git clone <your-repository-link>
 
-# 2. Install deps
+cd Employee-Salary-Prediction
+```
+
+
+### 2. Create Virtual Environment
+
+```bash
+python -m venv .venv
+```
+
+
+Activate environment:
+
+Windows:
+
+```bash
+.venv\Scripts\activate
+```
+
+
+Linux/Mac:
+
+```bash
+source .venv/bin/activate
+```
+
+
+---
+
+### 3. Install Requirements
+
+
+```bash
 pip install -r requirements.txt
+```
 
-# 3. Reproduce data + model (optional)
-python -m src.preprocess      # cleans raw CSV → data/processed/employee_salary_final.csv
-python -m src.train_boost     # trains HistGB → models/model_boost.pkl
 
-# 4. Launch the Streamlit app
+---
+
+### 4. Run Streamlit App
+
+
+```bash
 streamlit run app/app.py
+```
 
 
-🧪 Model Performance
+---
 
-Model	ROC‑AUC	F1
-Logistic Regression	0.84	0.60
-HistGradientBoosting	0.89	0.66
+# 🧪 Testing
 
-Scores obtained on a 20 % hold‑out test split.
 
-📈 Dataset
-UCI Adult Income dataset (48 842 rows → 44 k after cleaning).
-Features used:
+Run unit tests:
 
-Numeric	Categorical
-age, educational‑num, hours‑per‑week, capital‑gain, capital‑loss	workclass, occupation
+```bash
+pytest
+```
+
+
+---
+
+# 🛠️ Technologies Used
+
+
+- Python
+- Pandas
+- NumPy
+- Scikit-Learn
+- Matplotlib
+- Seaborn
+- Streamlit
+- Joblib
+
+
+---
+
+# 🔮 Future Improvements
+
+
+- Add more ML models
+- Hyperparameter optimization
+- Explain predictions using SHAP
+- Add database integration
+- Improve UI/UX
+
+
+---
+
+# 🙌 Acknowledgement
+
+This project was completed as part of the:
+
+**IBM SkillsBuild & Edunet Foundation Internship Program**
+
+Focused on applying Machine Learning concepts to solve real-world problems.
+
+
+---
+
+# 👨‍💻 Author
+
+**Deepak Kumar Jha**
+
+B.Tech Artificial Intelligence & Data Science
+
+```
+Learning. Building. Improving.
+```
+

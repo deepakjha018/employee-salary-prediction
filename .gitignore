@@ -1,4 +1,4 @@
-# ── Python ─────────────────────────────────────────────
+# ───────── Python ─────────
 __pycache__/
 *.py[cod]
 *.egg-info/
@@ -6,25 +6,28 @@ dist/
 build/
 .pytest_cache/
 
-# ── Virtual‑envs ───────────────────────────────────────
+
+# ───────── Virtual Environment ─────────
 .venv/
 env/
 venv/
 
-# ── Jupyter + Streamlit ────────────────────────────────
+
+# ───────── Jupyter ─────────
 .ipynb_checkpoints/
-# Streamlit auto‑saved session files
+
+
+# ───────── Streamlit Secrets ─────────
 .streamlit/config.toml
 .streamlit/credentials.toml
 
 
-# ── Reports / Figures ──────────────────────────────────
-reports/
-*.png
-*.pdf
-
-# ── OS / Editor miscellany ─────────────────────────────
+# ───────── OS / Editor ─────────
 .DS_Store
 Thumbs.db
 .idea/
 .vscode/
+
+
+# ───────── Large temporary files ─────────
+*.log
