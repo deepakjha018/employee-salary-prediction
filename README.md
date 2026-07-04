@@ -96,7 +96,6 @@ Employee-Salary-Prediction
 models/
 │
 ├── model_boost_notebook.pkl
-├── model_boost.pkl
 └── scaler.pkl
 
 ├── notebooks/

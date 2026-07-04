@@ -33,7 +33,6 @@ st.set_page_config(
 # -------------------------------------------------------
 # Load Model
 # -------------------------------------------------------
-
 MODEL_PATH = ROOT_DIR / "models" / "model_boost_notebook.pkl"
 
 if not MODEL_PATH.exists():
